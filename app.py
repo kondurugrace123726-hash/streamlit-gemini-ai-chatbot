@@ -56,3 +56,5 @@ if st.button("Get Response"):
 # -------Footer-------
 st.markdown("---")
 st.caption("Built with ❤️ using Streamlit + Google Gemini API")
+
+# Use python -m streamlit run app.py
