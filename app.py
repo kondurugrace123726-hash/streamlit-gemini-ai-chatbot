@@ -30,7 +30,7 @@ MODEL_NAME = "gemini-2.5-flash"
 st.title("🤖 Gemini AI ChatBot")
 st.caption("Powered by Gemini 2.5 Flash")
 st.subheader("💬 Ask a Question")
-question = st.text_input("", placeholder="Ask anything about tech, coding, or AI...")
+question = st.chat_input("Ask anything about tech, coding, or AI...")
 
 # -------Safe Generate Function-------
 def safe_generate(prompt: str) -> str:
@@ -45,13 +45,12 @@ def safe_generate(prompt: str) -> str:
         return "⚠️ AI is temporarily unavailable. Please try again later."
 
 # -------Buttons-------
-if st.button("Get Response"):
-    if question.strip():
-        with st.spinner("Thinking..."):
-            output = safe_generate(question)
-            st.success(output)
-    else:
-        st.warning("Please enter a question.")
+if question:
+    with st.spinner("Thinking..."):
+        output = safe_generate(question)
+        st.success(output)    
+else:
+    st.warning("Please enter a question.")
 
 # -------Footer-------
 st.markdown("---")
