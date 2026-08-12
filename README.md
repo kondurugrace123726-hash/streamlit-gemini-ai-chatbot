@@ -21,3 +21,5 @@ An AI-powered chatbot built using **Streamlit** and **Google Gemini API** with s
 - dotenv
 
 ---
+**Live Demo**
+Try the Chatbot: https://detanm8trbpjua3a46kwjt.streamlit.app/
